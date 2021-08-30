@@ -27,8 +27,6 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Magentix_CmsAuthor',
-    __DIR__
-);
+/** @var $block \Magentix\CmsAuthor\Block\Author */
+?>
+Autor: <?= $block->escapeHtml($block->getAuthor()) ?>

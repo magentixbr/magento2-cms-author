@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @author Gustavo Ulyssea - gustavo.ulyssea@gmail.com
  * @copyright Copyright (c) 2021 Magentix (https://www.magentix.com.br)
@@ -27,8 +28,25 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Magentix_CmsAuthor',
-    __DIR__
-);
+namespace Magentix\CmsAuthor\Block;
+
+use Magento\Framework\View\Element\Template;
+
+class Author extends \Magento\Framework\View\Element\Template
+{
+    protected $page;
+
+    public function __construct(
+        \Magento\Cms\Model\Page $page,
+        Template\Context $context,
+        array $data = []
+    ) {
+        $this->page = $page;
+        parent::__construct($context, $data);
+    }
+
+    public function getAuthor()
+    {
+        return $this->page->getData('author');
+    }
+}

@@ -1,11 +1,11 @@
 {
-    "name": "magentix/magento2-cms-author",
+    "name": "magentixbr/magento2-cms-author",
     "description": "Add author to CMS Pages",
     "require": {
         "magento/framework": ">=102.0.0"
     },
     "type": "magento2-module",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
